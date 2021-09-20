@@ -25,7 +25,7 @@ class _ViewImageState extends State<ViewImage> {
       var response = await Dio().get(widget.image,
           options: Options(responseType: ResponseType.bytes));
       await ImageGallerySaver.saveImage(Uint8List.fromList(response.data),
-          quality: 60, name: "${widget.id}");
+          quality: 80, name: "${widget.id}");
       EasyLoading.dismiss();
       EasyLoading.showToast('Image Saved');
     }

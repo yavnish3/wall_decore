@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:wall_decore/const.dart';
 
-PreferredSizeWidget appBar() {
+PreferredSizeWidget appBar(Widget icon) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0.0,
     centerTitle: true,
+    leading: icon,
     title: RichText(
       text: const TextSpan(
         style: TextStyle(
